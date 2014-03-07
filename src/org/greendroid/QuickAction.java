@@ -33,7 +33,7 @@ public class QuickAction {
 	public Drawable mDrawable;
 	public CharSequence mTitle;
 
-	/* package */WeakReference<View> mView;
+    WeakReference<View> mView;
 
 	public QuickAction(Drawable d, CharSequence title) {
 		mDrawable = d;

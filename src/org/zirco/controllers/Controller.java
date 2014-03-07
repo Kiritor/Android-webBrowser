@@ -31,7 +31,6 @@ import android.content.SharedPreferences;
 public final class Controller {
 	
 	private SharedPreferences mPreferences;
-
 	private List<CustomWebView> mWebViewList;
 	private List<DownloadItem> mDownloadList;
 	private List<String> mAdBlockWhiteList = null;
