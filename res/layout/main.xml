@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 主布局文件 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+		<ViewFlipper android:id="@+id/ViewFlipper"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+		</ViewFlipper>
+        <!-- android:background="@drawable/tb_background_top" -->
+        
+		<LinearLayout android:id="@+id/BarLayout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:scaleType="fitXY"
+			 android:weightSum="0.75"
+			android:layout_alignParentTop="true" android:orientation="vertical">														
+			
+			
+			<ProgressBar android:id="@+id/WebViewProgress"
+			    style="@style/progressBarHorizontal_color"  
+				android:layout_height="wrap_content" android:layout_width="fill_parent"
+				android:indeterminate="false" 
+				android:layout_marginLeft="2dip" android:layout_marginRight="2dip" android:layout_marginTop="1dip"
+				android:maxHeight="5px" android:minHeight="5px">
+			    
+			</ProgressBar>
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:background="@drawable/gd_quick_action_grid_bg">							
+					
+				<ImageButton android:layout_height="wrap_content"
+					android:id="@+id/ToolsBtn" android:layout_width="wrap_content"
+					android:background="@drawable/buttons"
+					android:layout_gravity="center_vertical"
+					android:layout_marginLeft="3dip"					
+					android:layout_marginRight="0dip"
+					android:src="@drawable/fav_icn_default"></ImageButton>
+
+				<AutoCompleteTextView android:layout_height="wrap_content" android:id="@+id/UrlText"
+					android:layout_marginTop="3dip"
+					android:layout_marginLeft="0dip"
+					android:layout_marginRight="0dip"
+					android:layout_width="fill_parent"
+					android:layout_weight="0.75"
+					android:dropDownHeight="wrap_content"
+					android:dropDownWidth="fill_parent"
+					android:inputType="textUri"></AutoCompleteTextView>
+
+				<ImageButton android:layout_height="wrap_content"
+					android:id="@+id/GoBtn" android:layout_width="wrap_content"
+					android:background="@drawable/buttons"
+					android:layout_gravity="center_vertical"
+					android:layout_marginLeft="0dip"					
+					android:layout_marginRight="3dip"
+					android:src="@drawable/ic_btn_go"></ImageButton>										
+				
+			</LinearLayout>											
+		</LinearLayout>
+		
+		<LinearLayout android:id="@+id/findControls" android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="wrap_content" android:paddingTop="5dip"
+			android:paddingLeft="4dip" android:paddingRight="4dip"
+			android:paddingBottom="1dip" android:background="@android:drawable/bottom_bar">
+
+			<ImageButton android:src="@drawable/ic_btn_find_prev"
+				android:id="@+id/find_previous" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+
+			<ImageButton android:src="@drawable/ic_btn_find_next"
+				android:id="@+id/find_next" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+
+			<LinearLayout android:layout_height="wrap_content"
+				android:layout_width="0dip" android:layout_weight="1"
+				android:orientation="vertical" android:layout_marginRight="6dip">
+
+					<EditText android:id="@+id/find_value" android:layout_width="match_parent"
+						android:layout_height="wrap_content" android:scrollHorizontally="true"
+						android:singleLine="true" android:ellipsize="end"
+						android:inputType="text" android:hint="@string/SearchDialog.Hint" />
+
+			</LinearLayout>
+
+			<ImageButton android:id="@+id/find_close"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:src="@drawable/ic_btn_close_panel" />
+
+		</LinearLayout>
+
+		<ImageView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:src="@drawable/bubbleright48"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true" android:id="@+id/BubbleRightView"></ImageView>
+			
+		<ImageView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:src="@drawable/bubbleleft48"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentLeft="true" android:id="@+id/BubbleLeftView"></ImageView>
+			
+		<ImageView android:id="@+id/PreviousTabView"
+			android:src="@drawable/previous_tab"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true" android:layout_centerVertical="true"></ImageView>
+			
+		<ImageView android:id="@+id/NextTabView"
+			android:src="@drawable/next_tab"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true"></ImageView>		
+
+		<LinearLayout android:id="@+id/BottomBarLayout"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+		    android:scaleType="fitXY"
+			android:layout_alignParentBottom="true" android:weightSum="5"
+			android:background="@drawable/gd_quick_action_grid_bg">
+			
+			<ImageButton android:layout_height="wrap_content"
+				android:id="@+id/PreviousBtn" android:layout_width="wrap_content"
+				android:background="@drawable/buttons_bottom"
+				android:layout_marginTop="7dip"
+				android:layout_marginLeft="3dip" 
+				android:src="@drawable/ic_btn_next" android:layout_weight="1"></ImageButton>						
+			<ImageButton android:layout_height="wrap_content"
+				android:id="@+id/RemoveTabBtn" android:layout_width="wrap_content"
+				android:background="@drawable/buttons_bottom"
+				android:layout_marginTop="7dip"
+				android:layout_marginLeft="3dip"
+				android:src="@drawable/ic_btn_close_tab" android:layout_weight="1"></ImageButton>
+			<ImageButton android:layout_height="wrap_content"
+				android:id="@+id/QuickBtn" android:layout_width="wrap_content"
+				android:background="@drawable/buttons_bottom"
+				android:layout_marginTop="7dip"
+				android:layout_marginLeft="3dip"
+				android:src="@drawable/ic_btn_bookmarks" android:layout_weight="1"></ImageButton>			
+			<ImageButton android:layout_height="wrap_content"
+				android:id="@+id/NewTabBtn" android:layout_width="wrap_content"
+				android:background="@drawable/buttons_bottom"
+				android:layout_marginTop="7dip"
+				android:layout_marginLeft="3dip"
+				android:src="@drawable/ic_btn_open_tab" android:layout_weight="1"></ImageButton>
+			<ImageButton android:layout_height="wrap_content"
+				android:id="@+id/NextBtn" android:layout_width="wrap_content"
+				android:background="@drawable/buttons_bottom"
+				android:layout_marginTop="7dip"
+				android:layout_marginLeft="3dip"
+				android:layout_marginRight="3dip"
+				android:src="@drawable/ic_btn_forward" android:layout_weight="1"></ImageButton>
+		</LinearLayout>				
+
+	</RelativeLayout>
+
+</LinearLayout>
