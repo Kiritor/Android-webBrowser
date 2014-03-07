@@ -201,7 +201,7 @@ public abstract class QuickActionWidget extends PopupWindow {
 		final int screenWidth = mScreenWidth;
 		final boolean onTop = mIsOnTop;
 		final int arrowPointX = mRect.centerX();
-
+    
 		if (arrowPointX <= screenWidth / 4) {
 			setAnimationStyle(onTop ? R.style.GreenDroid_Animation_PopUp_Left
 					: R.style.GreenDroid_Animation_PopDown_Left);
