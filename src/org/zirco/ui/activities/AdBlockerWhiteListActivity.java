@@ -48,9 +48,7 @@ public class AdBlockerWhiteListActivity extends ListActivity {
 	
 	private static final int MENU_ADD = Menu.FIRST;
 	private static final int MENU_CLEAR = Menu.FIRST + 1;
-	
 	private static final int MENU_DELETE = Menu.FIRST + 10;
-	
 	private Cursor mCursor;
 	private DbAdapter mDbAdapter;
 	private SimpleCursorAdapter mCursorAdapter;

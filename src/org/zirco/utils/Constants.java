@@ -20,7 +20,10 @@ import org.zirco.R;
 import android.content.Context;
 
 /**
- * Defines constants.
+ * 
+ * @author LCore
+ *
+ *   常量类,包含一些系统定义的常量
  */
 public class Constants {
 	
@@ -37,7 +40,7 @@ public class Constants {
 	public static final int BOOKMARK_THUMBNAIL_HEIGHT_FACTOR = 60;
 	
 	/**
-	 * Specials urls.
+	 * 特殊的URL
 	 */
 	public static final String URL_ABOUT_BLANK = "about:blank";
 	public static final String URL_ABOUT_START = "about:start";
@@ -46,19 +49,19 @@ public class Constants {
 	public static final String URL_GOOGLE_MOBILE_VIEW_NO_FORMAT = "http://www.google.com/gwt/x?u=";
 	
 	/**
-	 * Search urls.
+	 * 搜索URL
 	 */	
 	public static String URL_SEARCH_GOOGLE = "http://www.google.com/search?ie=UTF-8&sourceid=navclient&gfns=1&q=%s";
 	public static String URL_SEARCH_WIKIPEDIA = "http://en.wikipedia.org/w/index.php?search=%s&go=Go";
 	
 	/**
-	 * User agents.
+	 * 用户代理
 	 */
 	public static String USER_AGENT_DEFAULT = "";
 	public static String USER_AGENT_DESKTOP = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Chrome/7.0.517.44 Safari/534.7";
 	
 	/**
-	 * Preferences.
+	 * 界面设置.
 	 */
 	public static final String PREFERENCES_GENERAL_HOME_PAGE = "GeneralHomePage";
 	public static final String PREFERENCES_GENERAL_SEARCH_URL = "GeneralSearchUrl";
@@ -115,12 +118,8 @@ public class Constants {
 	public static final String PREFERENCE_BOOKMARKS_DATABASE = "PREFERENCE_BOOKMARKS_DATABASE";
 	
 	/**
-	 * Methods.
-	 */
-	
-	/**
-	 * Initialize the search url "constants", which depends on the user local.
-	 * @param context The current context.
+	 * 
+	 * @param context
 	 */
 	public static void initializeConstantsFromResources(Context context) {
 		URL_SEARCH_GOOGLE = context.getResources().getString(R.string.Constants_SearchUrlGoogle);
