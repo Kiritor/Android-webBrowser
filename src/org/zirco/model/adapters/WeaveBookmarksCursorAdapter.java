@@ -50,7 +50,6 @@ public class WeaveBookmarksCursorAdapter extends SimpleCursorAdapter {
 			urlView.setVisibility(View.VISIBLE);
 			iconView.setImageResource(R.drawable.fav_icn_default);
 		}
-		
 		return superView;
 	}
 
