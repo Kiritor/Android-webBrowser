@@ -81,7 +81,6 @@
 			android:src="@drawable/next_tab"
 			android:layout_height="wrap_content" android:layout_width="wrap_content"
 			android:layout_alignParentRight="true" android:layout_centerVertical="true"></ImageView>		
-
 		<LinearLayout
 		    android:id="@+id/BottomBarLayout"
 		    android:layout_width="fill_parent"
